@@ -1,0 +1,45 @@
+body, html { 
+    height: 100%; 
+    overflow: hidden; 
+}
+
+#video-grid { 
+    align-content: center; 
+    justify-content: center; 
+}
+
+/* === CHANGED: Increased Size to 480x360 (Standard SD) === */
+video { 
+    width: 780px;      /* Increased from 300px */
+    height: 560px;     /* Increased from 225px */
+    object-fit: cover; 
+    background: black; 
+    border-radius: 8px; 
+    border: 2px solid #444; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Added shadow for better look */
+}
+
+.video-container { 
+    position: relative; 
+    margin: 10px;      /* Added margin for spacing */
+}
+
+.subtitle-msg { 
+    font-size: 0.9rem; 
+    margin-bottom: 8px; 
+    border-bottom: 1px solid #333;
+    padding-bottom: 4px;
+}
+
+.subtitle-orig { 
+    color: #aaa; 
+    font-style: italic; 
+    font-size: 0.85rem;
+}
+
+.subtitle-trans { 
+    color: #fff; 
+    font-weight: bold; 
+    font-size: 1.1rem;
+    color: #4db6ac; /* Teal color for translation to make it pop */
+}

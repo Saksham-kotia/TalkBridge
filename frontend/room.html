@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TalkBridge Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="bg-dark text-white">
+    <div class="container-fluid h-100 p-3">
+        <div class="row h-100">
+            <!-- Video Grid -->
+            <div class="col-md-9 d-flex flex-wrap" id="video-grid">
+                <div class="video-container position-relative m-2">
+                    <video id="localVideo" autoplay muted playsinline></video>
+                    <span class="badge bg-primary position-absolute bottom-0 start-0 m-2">You</span>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-md-3 bg-secondary rounded p-3 d-flex flex-column">
+                <h5>Room: <span id="room-code"></span></h5>
+                <hr>
+                
+                <!-- LANGUAGE SELECTOR -->
+                <div class="mb-3">
+                    <label class="form-label">Translate To:</label>
+                    <select id="target-lang" class="form-select">
+                        <option value="es">Spanish (Español)</option>
+                        <option value="fr">French (Français)</option>
+                        <option value="hi">Hindi (हिंदी)</option>
+                    </select>
+                </div>
+
+                <div id="transcript-box" class="flex-grow-1 overflow-auto bg-dark p-2 rounded mb-3" style="height: 0px;">
+                    <!-- Subtitles appear here -->
+                </div>
+                
+                <div class="controls text-center">
+                    <button id="btn-mic" class="btn btn-danger rounded-circle">🎤</button>
+                    <button id="btn-cam" class="btn btn-success rounded-circle">📷</button>
+                    <!-- REC Button -->
+                    <button class="btn btn-info" style="min-width: 120px;">🔴 Start Speaking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+</html>

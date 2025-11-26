@@ -1,0 +1,18 @@
+--- Security (NEVER PUSH THESE) ---
+
+google_credentials.json
+.env
+secret.key
+
+--- Python Junk ---
+
+venv/
+pycache/
+*.pyc
+*.sqlite3
+db.sqlite3
+
+--- OS Junk ---
+
+.DS_Store
+Thumbs.db

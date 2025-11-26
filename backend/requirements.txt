@@ -1,0 +1,11 @@
+Django>=4.2,<5.0
+channels>=4.0
+daphne
+djangorestframework
+djangorestframework-simplejwt
+google-cloud-speech
+google-cloud-translate
+google-cloud-texttospeech
+numpy
+requests
+typing-extensions; python_version < '3.10'
