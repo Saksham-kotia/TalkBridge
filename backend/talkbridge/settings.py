@@ -105,29 +105,3 @@ REST_FRAMEWORK = {
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
 }
-# ```
-
-# ### **Step 2: Reset & Migrate (Critical)**
-# Because we changed the User model configuration, we need to make sure the database starts fresh.
-
-# Run these commands **exactly in this order** in your backend terminal:
-
-# 1.  **Delete the old database (if it exists):**
-#     ```powershell
-#     rm db.sqlite3
-#     ```
-#     *(If this says "Cannot find file", that is fine, just ignore it).*
-
-# 2.  **Create the migrations for your core app:**
-#     ```powershell
-#     python manage.py makemigrations core
-#     ```
-
-# 3.  **Run the general migrations:**
-#     ```powershell
-#     python manage.py migrate
-#     ```
-
-# 4.  **Start the server:**
-#     ```powershell
-#     daphne -p 8000 talkbridge.asgi:application
